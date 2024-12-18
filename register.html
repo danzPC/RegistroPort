@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Entrada/Saída</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registrar Entrada/Saída</h2>
+        
+        <!-- Exibir mensagens de flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="alert alert-success">
+                    {% for category, message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" required><br><br>
+
+            <label for="rg">RG/CPF:</label>
+            <input type="text" name="rg" required><br><br>
+
+            <label for="placa">Placa:</label>
+            <input type="text" name="placa" required><br><br>
+
+            <label for="casa">Casa:</label>
+            <input type="text" name="casa" required><br><br>
+
+            <label for="autorizador">Autorizador:</label>
+            <input type="text" name="autorizador" required><br><br>
+
+            <label for="tipo">Tipo (Entrada/Saída):</label>
+            <select name="tipo" required>
+                <option value="Entrada">Entrada</option>
+                <option value="Saída">Saída</option>
+            </select><br><br>
+
+            <label for="visitante">Visitante ou Prestador de Serviço:</label>
+            <select name="visitante" required>
+                <option value="Visitante">Visitante</option>
+                <option value="Prestador de Serviço">Prestador de Serviço</option>
+            </select><br><br>
+
+            <button type="submit">Registrar</button>
+        </form>
+
+        <a href="/logout">Sair</a>
+    </div>
+
+    <!-- Adicionar o CSS para o alerta -->
+    <style>
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .alert p {
+            margin: 0;
+        }
+    </style>
+</body>
+</html>

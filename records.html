@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Registros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="records-container">
+        <h2>Registros de Entrada/Saída</h2>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>RG</th>
+                <th>Placa</th>
+                <th>Casa</th>
+                <th>Autorizador</th>
+                <th>Tipo (Entrada/Saída)</th>
+                <th>Visitante/Prestador de Serviço</th>
+                <th>Data e Hora</th>
+            </tr>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.nome }}</td>
+                <td>{{ record.rg }}</td>
+                <td>{{ record.placa }}</td>
+                <td>{{ record.casa }}</td>
+                <td>{{ record.autorizador }}</td>
+                <td>{{ record.tipo }}</td>
+                <td>{{ record.visitante }}</td>  <!-- Exibindo o tipo (Visitante/Prestador) -->
+                <td>{{ record.data_hora }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/logout">Sair</a>
+    </div>
+</body>
+</html>

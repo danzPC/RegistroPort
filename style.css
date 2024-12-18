@@ -1,0 +1,159 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container Principal */
+.records-container {
+    width: 90%; /* Ocupa 90% da largura da tela */
+    max-width: 1200px; /* Define uma largura máxima */
+    margin: 20px auto; /* Espaçamento superior/inferior */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Permite rolagem horizontal */
+}
+
+/* Títulos */
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem; /* Tamanho do título */
+}
+
+/* Estilo da Tabela */
+table {
+    width: 100%; /* Faz a tabela ocupar todo o container */
+    border-collapse: collapse; /* Junta as bordas da tabela */
+    table-layout: fixed; /* Mantém as colunas proporcionais */
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd; /* Bordas suaves */
+    text-align: center; /* Centraliza o conteúdo */
+    font-size: 14px; /* Tamanho de fonte padrão */
+    word-wrap: break-word; /* Quebra palavras longas */
+}
+
+th {
+    background-color: #4CAF50; /* Fundo verde */
+    color: white; /* Texto branco */
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Linhas pares com fundo cinza claro */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Efeito hover para linhas */
+    cursor: pointer;
+}
+
+/* Botão Sair */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Inputs e Botões Gerais */
+input[type="text"], 
+input[type="password"], 
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Links */
+a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .records-container {
+        width: 95%; /* Reduz a largura em telas menores */
+        padding: 10px;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 12px; /* Reduz tamanho da fonte */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+
+    button {
+        font-size: 14px; /* Botão menor */
+        padding: 10px 15px;
+    }
+}
+
+/* Estilo para o formulário */
+.form-container {
+    background-color: #f9f9f9;  /* Cor de fundo clara */
+    border: 2px solid #ddd;     /* Borda fina de cor cinza */
+    border-radius: 8px;         /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do formulário */
+    padding: 20px;              /* Espaçamento interno */
+    width: 700px;               /* Largura do formulário */
+    margin: 20px auto;          /* Centraliza o formulário na página */
+}
+
+/* Adicionando um efeito ao passar o mouse */
+.form-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+/* Estilo para o login */
+.login-container {
+    background-color: #f9f9f9;  /* Cor de fundo clara */
+    border: 2px solid #ddd;     /* Borda fina de cor cinza */
+    border-radius: 8px;         /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do formulário */
+    padding: 20px;              /* Espaçamento interno */
+    width: 300px;               /* Largura do formulário */
+    margin: 20px auto;          /* Centraliza o formulário na página */
+}
+
+/* Adicionando um efeito ao passar o mouse */
+.login-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
